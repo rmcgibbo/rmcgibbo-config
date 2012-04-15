@@ -44,8 +44,10 @@ def main():
     # link ipython_config.py
     if os.path.exists(os.path.expanduser('~/.ipython/profile_default')):
         link('ipython_config.py', '~/.ipython/profile_default/ipython_config.py')
+    elif os.path.exists(os.path.expanduser('~/.config/ipython/profile_default')):
+        link('ipython_config.py', '~/.config/ipython/profile_default/ipython_config.py')
     else:
-        print 'Could not find an ~/.ipython/profile_default directory'
+        print 'Could not find an ipython config directory'
 
 if __name__ == '__main__':
     main()
