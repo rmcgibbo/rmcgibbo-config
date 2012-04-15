@@ -4,6 +4,9 @@ source $HOME/.bashrc.base
 # set emacs alias
 alias emacs="$HOME/local/bin/emacs -nw"
 alias emacsw="$HOME/local/bin/emacs"
+alias ls="ls -l --color"
+alias ll="ls -lh --color"
+alias la="ls -alh --color"
 
 # install EPD Python
 export PATH="$HOME/local/epd-7.1-1-rh5-x86_64/bin:$PATH" 
