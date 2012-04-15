@@ -3,10 +3,6 @@ source $HOME/.bashrc.base
 
 EDITOR=emacs
 export PS1="\n\[\e[1;31m\]\u@\h \[\e[0;33m\]\w\[\e[0m\]\n$ "
-alias ls="ls --color"
-alias ll="ll -lh --color"
-alias la="ls -alh --color"
-
 
 # gromacs setup
 export GMXLIB=/usr/local/gromacs/share/gromacs/top/
