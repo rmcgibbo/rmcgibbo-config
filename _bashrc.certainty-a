@@ -1,6 +1,9 @@
 #!/bin/bash
 source $HOME/.bashrc.base
 
+# purple
+export PS1="\n\[\e[35m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ "
+
 # set emacs alias
 alias emacs="$HOME/local/bin/emacs -nw"
 alias emacsw="$HOME/local/bin/emacs"
