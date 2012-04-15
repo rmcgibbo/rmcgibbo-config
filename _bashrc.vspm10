@@ -1,11 +1,13 @@
 #!/bin/bash
 source $HOME/.bashrc.base
-
 export EDITOR=mate
-
 #alias octave="/Applications/Octave.app/Contents/Resources/bin/octave"
 
+# Setting PATH for EPD Python
+export PATH=/Library/Frameworks/EPD64.framework/Versions/Current/bin:$PATH
+
+# i'm not sure what this is
 export PATH=/usr/local/sbin:$PATH
 
-# install local bin
+# install local bin (random scripts)
 export PATH="$HOME/local/bin:$PATH"
