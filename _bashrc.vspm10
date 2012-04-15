@@ -1,0 +1,12 @@
+#!/bin/bash
+
+source _bashrc
+
+export EDITOR=mate
+
+#alias octave="/Applications/Octave.app/Contents/Resources/bin/octave"
+
+export PATH=/usr/local/sbin:$PATH
+
+# install local bin
+export PATH=".:$HOME/local/bin:$PATH"

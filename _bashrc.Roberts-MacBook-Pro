@@ -1,0 +1,15 @@
+#!/bin/bash
+source .bashrc.base
+
+export PATH=$HOME/local/bin:$PATH
+export EDITOR=mate
+
+# Setting PATH for EPD-7.1-2
+export PATH="/Library/Frameworks/EPD64.framework/Versions/Current/bin:$PATH"
+
+# Install scala
+export SCALA_HOME="$HOME/local/scala-2.9.1"
+export SCALA_DOC="$HOME/local/scala-2.9.1/doc/scala-devel-docs"
+export SCALA_COMPILER="$HOME/local/scala-2.9.1/bin/scalac"
+export PATH="$HOME/local/scala-2.9.1/bin:${PATH}"
+
