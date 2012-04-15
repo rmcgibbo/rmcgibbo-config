@@ -1,4 +1,5 @@
-source _bashrc
+#!/bin/bash
+source .bashrc.base
 
 # set emacs alias
 alias emacs="$HOME/local/bin/emacs -nw"

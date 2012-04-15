@@ -1,5 +1,5 @@
 #!/bin/bash
-source _bashrc
+source .bashrc.base
 
 EDITOR=emacs
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'

@@ -1,6 +1,5 @@
 #!/bin/bash
-
-source _bashrc
+source .bashrc.base
 
 export EDITOR=mate
 
