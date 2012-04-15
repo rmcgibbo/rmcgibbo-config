@@ -3,6 +3,10 @@ source $HOME/.bashrc.base
 
 EDITOR=emacs
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+alias ls="ls --color"
+alias ll="ll -lh --color"
+alias la="ls -alh --color"
+
 
 # gromacs setup
 export GMXLIB=/usr/local/gromacs/share/gromacs/top/
