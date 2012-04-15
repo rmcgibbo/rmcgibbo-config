@@ -23,7 +23,7 @@ alias mv="mv -i"         # Prompt before overwriting files via mv
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 
-  alias ls='ls -lhF --color=auto'
+  alias ll='ls -lhF --color=auto'
   alias ls='ls -hF --color=auto'
   alias la='ls -al --color=auto'
   
