@@ -1,5 +1,9 @@
+#!/bin/bash
 #
 # Bourne Again SHell init file.
+
+# add current directory to path
+export PATH=".:$PATH"
 
 # Make the command line history ignore duplicate command lines.
 history_control=ignoredups

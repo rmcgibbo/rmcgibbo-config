@@ -1,5 +1,5 @@
 #!/bin/bash
-source .bashrc.base
+source $HOME/.bashrc.base
 
 export PATH=$HOME/local/bin:$PATH
 export EDITOR=mate

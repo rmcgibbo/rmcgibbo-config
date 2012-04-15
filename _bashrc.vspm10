@@ -1,5 +1,5 @@
 #!/bin/bash
-source .bashrc.base
+source $HOME/.bashrc.base
 
 export EDITOR=mate
 
@@ -8,4 +8,4 @@ export EDITOR=mate
 export PATH=/usr/local/sbin:$PATH
 
 # install local bin
-export PATH=".:$HOME/local/bin:$PATH"
+export PATH="$HOME/local/bin:$PATH"

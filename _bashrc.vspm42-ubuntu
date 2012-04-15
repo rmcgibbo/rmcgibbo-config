@@ -1,5 +1,5 @@
 #!/bin/bash
-source .bashrc.base
+source $HOME/.bashrc.base
 
 EDITOR=emacs
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
@@ -19,4 +19,4 @@ export PATH="$HOME/local/cctools/bin:$PATH"
 export PYTHONPATH="$HOME/local/cctools/lib/python2.7/site-packages"
 
 # install local bin
-export PATH=".:$HOME/local/bin:$PATH"
+export PATH="$HOME/local/bin:$PATH"

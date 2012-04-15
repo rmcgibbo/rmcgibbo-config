@@ -1,5 +1,5 @@
 #!/bin/bash
-source .bashrc.base
+source $HOME/.bashrc.base
 
 # set emacs alias
 alias emacs="$HOME/local/bin/emacs -nw"
@@ -12,5 +12,5 @@ export PATH="$HOME/local/epd-7.1-1-rh5-x86_64/bin:$PATH"
 export PATH="$HOME/local/cctools/bin:$PATH" 
 
 # install other local stuff
-export PATH=".:$HOME/local/bin:$PATH"
+export PATH="$HOME/local/bin:$PATH"
 
