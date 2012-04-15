@@ -21,17 +21,23 @@ alias mv="mv -i"         # Prompt before overwriting files via mv
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+
+  alias ls='ls -lhF --color=auto'
+  alias ls='ls -hF --color=auto'
+  alias la='ls -al --color=auto'
+  
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
+else
+  alias ll='ls -lhF'
+  alias ls='ls -hF'
+  alias la='ls -al'
 fi
 
 # Create aliases for commonly used commands. 
-alias ll='ls -lhF'
-alias ls='ls -hF'
-alias la='ls -al'
+
 
 # color ls
 export CLICOLOR=1
