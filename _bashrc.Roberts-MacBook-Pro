@@ -1,7 +1,10 @@
 #!/bin/bash
 source $HOME/.bashrc.base
 
+# add local script bin to path
 export PATH=$HOME/local/bin:$PATH
+
+# set textmate as default editor
 export EDITOR=mate
 
 # Setting PATH for EPD-7.1-2
@@ -13,3 +16,5 @@ export SCALA_DOC="$HOME/local/scala-2.9.1/doc/scala-devel-docs"
 export SCALA_COMPILER="$HOME/local/scala-2.9.1/bin/scalac"
 export PATH="$HOME/local/scala-2.9.1/bin:${PATH}"
 
+# Add custom path to LaTeX for finding my own .sty files
+export TEXINPUTS=.:$HOME/.LaTeX:

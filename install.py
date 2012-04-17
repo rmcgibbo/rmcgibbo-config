@@ -48,6 +48,13 @@ def main():
         link('ipython_config.py', '~/.config/ipython/profile_default/ipython_config.py')
     else:
         print 'Could not find an ipython config directory'
+        
+    if 'TEXINPUTS' in os.environ:
+        link('rmcgibbo-latex.sty', '~/.LaTeX/rmcgibbo-latex.sty')
+    else:
+        print 'Skipping installing custom LaTeX style file because'
+        print "I didn't find the 'TEXINPUT' environment variable"
+        print "(It should point to ~/.LaTeX for this to work)"
 
 if __name__ == '__main__':
     main()
