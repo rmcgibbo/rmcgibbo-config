@@ -1,0 +1,20 @@
+#!/bin/bash
+source $HOME/.bashrc.base
+
+# set term type (emacs colors dont work rightt with default)
+export TERM=xterm-color
+
+# purple
+export PS1="\n\[\e[35m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ "
+
+
+# install EPD Python
+export PATH=$HOME/local/epd-7.1-2-rh5-x86_64/bin:$PATH
+
+# install CCTools
+export PATH="$HOME/local/cctools/bin:$PATH"
+
+#install gromacs
+export GMXBIN=$HOME/local/gromacs453/bin
+export GMXLIB=$HOME/local/gromacs453/lib
+export PATH=$HOME/local/gromacs453/bin:$PATH

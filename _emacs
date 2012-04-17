@@ -12,3 +12,17 @@
 
 ;; Remove the menu bar
 (menu-bar-mode 0)
+
+;; force syntax highting!
+(global-font-lock-mode 1)
+
+;; display column number
+(column-number-mode 1)
+
+;; make colors display correctly in M-x shell
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+
+;; make the prompt read only in M-x shell
+(add-hook 'shell-mode-hook 
+     '(lambda () (toggle-truncate-lines 1)))
+(setq comint-prompt-read-only t)
