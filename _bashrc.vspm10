@@ -11,3 +11,6 @@ export PATH=/usr/local/sbin:$PATH
 
 # install local bin (random scripts)
 export PATH="$HOME/local/bin:$PATH"
+
+# install msmbuilder extras
+export PYTHONPATH=$HOME/msmbuilder/msmbuilder:$PYTHONPATH

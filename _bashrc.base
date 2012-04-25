@@ -10,7 +10,7 @@ history_control=ignoredups
 
 # Set the shell prompt.  See the bash man page for a description 
 # of special characters.
-export PS1="\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ "
+ export PS1="\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ "
 
 # Establish a safe environment.
 set -o ignoreeof         # Do not log out with <ctrl-d>
@@ -40,8 +40,8 @@ fi
 
 
 # color ls
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
+ export CLICOLOR=1
+ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 # Make the sort program behave in the traditional way.
 export LC_ALL=C
