@@ -14,3 +14,6 @@ export PATH="$HOME/local/bin:$PATH"
 
 # install msmbuilder extras
 export PYTHONPATH=$HOME/msmbuilder/msmbuilder:$PYTHONPATH
+
+# Add custom path to LaTeX for finding my own .sty files
+export TEXINPUTS=.:$HOME/.LaTeX:
