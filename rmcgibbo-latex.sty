@@ -10,10 +10,23 @@
 \usepackage{mathtools}
 \usepackage{graphicx}
 
+% derivatives
 \newcommand{\pdiff}[2]{\frac{\partial#1}{\partial#2}}
 \newcommand{\diff}[2]{\frac{d#1}{d#2}}
+
+% displaystyle sum
 \newcommand{\Sum}{\displaystyle\sum}
+
+% right and left parens
 \renewcommand{\(}{\left(}
 \renewcommand{\)}{\right)}
+
+% argmin, argmax
 \DeclareMathOperator*{\argmax}{arg\,max\,}
 \DeclareMathOperator*{\argmin}{arg\,min\,}
+
+% physics
+\newcommand{\degC}{\ensuremath{^\circ}C}
+\newcommand{\fracu}[2]{\;\ensuremath{\frac{\text{#1}}{\text{#2}}}\;}
+\renewcommand{\u}[1]{\;\ensuremath{\text{#1}}\;}
+\newcommand{\e}[1]{\ensuremath{\times 10^{#1}}}

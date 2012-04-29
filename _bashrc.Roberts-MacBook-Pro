@@ -7,6 +7,9 @@ export PATH=$HOME/local/bin:$PATH
 # set textmate as default editor
 export EDITOR=mate
 
+# install msmbuilder extras                       
+export PYTHONPATH=$HOME/local/msmbuilder/msmbuilder:$PYTHONPATH
+
 # Setting PATH for EPD-7.1-2
 export PATH="/Library/Frameworks/EPD64.framework/Versions/Current/bin:$PATH"
 
