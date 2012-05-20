@@ -20,20 +20,9 @@ c = get_config()
 
 # lines of code to run at IPython startup.
 c.TerminalIPythonApp.exec_lines = [
-# lazy import from http://code.activestate.com/recipes/473888-lazy-module-imports/
-#'import importing',
-#'importing.install()',
-
-'import numpy as np',
 'import matplotlib.pyplot as pp',
-'from msmbuilder import Serializer',
-'from msmbuilder import Trajectory',
-'import scipy',
-'import scipy.linalg',
-'import scipy.io',
-'import scipy.spatial',
-'import scipy.sparse',
-'import scipy.sparse.linalg',
+'pp.ion()',
+'import numpy as np',
 'import os',
 'import sys',
 ]
