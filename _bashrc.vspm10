@@ -3,7 +3,6 @@ source $HOME/.bashrc.base
 export EDITOR=mate
 
 alias ip='ipython'
-alias ipunits='ipython --profile=units'
 alias ipmsm='ipython --profile=msm'
 #alias octave="/Applications/Octave.app/Contents/Resources/bin/octave"
 
