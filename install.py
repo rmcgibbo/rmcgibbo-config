@@ -48,6 +48,14 @@ def main():
         link('ipython_config.py', '~/.config/ipython/profile_default/ipython_config.py')
     else:
         print 'Could not find an ipython config directory'
+        
+    # link ipython_config_profile_msm.py
+    if os.path.exists(os.path.expanduser('~/.ipython/profile_msm')):
+        link('ipython_config_profile_msm.py', '~/.ipython/profile_msm/ipython_config.py')
+    elif os.path.exists(os.path.expanduser('~/.config/ipython/profile_msm')):
+        link('ipython_config.py', '~/.config/ipython/profile_msm/ipython_config.py')
+    else:
+        print 'Could not find an ipython config directory for profile=msm'
 
     if 'TEXINPUTS' in os.environ:
         link('rmcgibbo-latex.sty', '~/.LaTeX/rmcgibbo-latex.sty')
