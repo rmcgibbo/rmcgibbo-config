@@ -1,8 +1,8 @@
-
 # Configuration file for ipython.
 
 c = get_config()
 load_subconfig('ipython_config.py', profile='default')
+
 #------------------------------------------------------------------------------
 # TerminalIPythonApp configuration
 #------------------------------------------------------------------------------
@@ -20,16 +20,27 @@ load_subconfig('ipython_config.py', profile='default')
 # c.TerminalIPythonApp.log_level = 30
 
 # lines of code to run at IPython startup.
-c.TerminalIPythonApp.exec_lines = [
-'from msmbuilder import Serializer',
-'from msmbuilder import Trajectory',
-'import scipy',
-'import scipy.linalg',
-'import scipy.io',
-'import scipy.spatial',
-'import scipy.sparse',
-'import scipy.sparse.linalg',
-]
+print_startup_code = """import numpy as np
+import quantities as pq
+from __future__ import division
+
+k = 1.3806488e-23 * pq.J / pq.K    # Boltzmann's constant
+c = 299792458     * pq.m / pq.s    # Speed of light
+h = 6.626068e-34  * pq.J * pq.s    # Planck's constant
+Na = 6.022141e23  * pq.mol**(-1)   # Avagadro's number
+hbar = h / (2 * np.pi)             # Reduced Planck's constant
+
+# convert a string to an array
+s2a = lambda string: np.array(np.matrix(string)) if ';' in string else np.array(np.matrix(string)).reshape(-1)
+"""
+exec_lines = print_startup_code.split('\n')
+
+PURPLE = '\033[95m'
+ENDCOLOR = '\033[0m'
+exec_lines.append('print """\n{}{}{}"""'.format(PURPLE, print_startup_code, 
+    ENDCOLOR))
+
+c.TerminalIPythonApp.exec_lines = exec_lines
 
 # Enable GUI event loop integration ('qt', 'wx', 'gtk').
 # c.TerminalIPythonApp.gui = None

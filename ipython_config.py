@@ -1,5 +1,5 @@
 # Configuration file for ipython.
-
+import os
 c = get_config()
 
 #------------------------------------------------------------------------------
@@ -73,7 +73,7 @@ c.InteractiveShell.xmode = 'Context'
 # c.TerminalIPythonApp.extra_extension = ''
 
 # List of files to run at IPython startup.
-# c.TerminalIPythonApp.exec_files = []
+c.TerminalIPythonApp.exec_files = [os.path.expanduser('~/local/rmcgibbo-config/ipython_extras.ipy')]
 
 # Whether to overwrite existing config files when copying
 # c.TerminalIPythonApp.overwrite = False
