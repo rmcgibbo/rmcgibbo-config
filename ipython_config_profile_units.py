@@ -30,6 +30,9 @@ h = 6.626068e-34  * pq.J * pq.s    # Planck's constant
 Na = 6.022141e23  * pq.mol**(-1)   # Avagadro's number
 hbar = h / (2 * np.pi)             # Reduced Planck's constant
 
+# 1 / kT
+beta = lambda temp: (k * temp * pq.K)**(-1)
+
 # convert a string to an array
 s2a = lambda string: np.array(np.matrix(string)) if ';' in string else np.array(np.matrix(string)).reshape(-1)
 """

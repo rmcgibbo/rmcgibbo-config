@@ -36,6 +36,8 @@ else
   alias la='ls -al'
 fi
 
+alias df='df -h'
+
 # color ls
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
