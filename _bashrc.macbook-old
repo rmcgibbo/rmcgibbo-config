@@ -1,9 +1,12 @@
 #!/bin/bash
 source $HOME/.bashrc.base
 
+# set the 
+export PS1="\n\[\033[1;32m\]\u@\h \[\033[0;33m\]\w\[\e[0m\]\n\$ "
+
 export PATH=$HOME/local/script_bin:$PATH
 export EDITOR=emacs
 
 # Setting PATH for EPD-7.2-2
-export PATH=$HOME/local/epd-7.2.2-rh5-x86_64/bin:$PATH
+export PATH=$HOME/local/epd-7.3.1-rh5_x86_64/bin:$PATH
 
