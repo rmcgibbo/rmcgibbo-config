@@ -21,6 +21,7 @@ load_subconfig('ipython_config.py', profile='default')
 
 # lines of code to run at IPython startup.
 c.TerminalIPythonApp.exec_lines = [
+'from msmbuilder import Project',
 'from msmbuilder import Serializer',
 'from msmbuilder import Trajectory',
 'import scipy',
