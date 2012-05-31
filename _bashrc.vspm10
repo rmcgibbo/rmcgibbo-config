@@ -4,6 +4,7 @@ export EDITOR=mate
 
 alias ip='ipython'
 alias ipmsm='ipython --profile=msm'
+alias ipunits='ipython --profile=units'
 #alias octave="/Applications/Octave.app/Contents/Resources/bin/octave"
 
 # Setting PATH for EPD Python
