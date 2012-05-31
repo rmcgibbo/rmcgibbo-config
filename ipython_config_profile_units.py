@@ -43,7 +43,7 @@ ENDCOLOR = '\033[0m'
 exec_lines.append('print """\n{}{}{}"""'.format(PURPLE, print_startup_code, 
     ENDCOLOR))
 
-c.TerminalIPythonApp.exec_lines = exec_lines
+c.TerminalIPythonApp.exec_lines.extend(exec_lines)
 
 # Enable GUI event loop integration ('qt', 'wx', 'gtk').
 # c.TerminalIPythonApp.gui = None

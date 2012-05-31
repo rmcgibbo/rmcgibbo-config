@@ -20,7 +20,7 @@ load_subconfig('ipython_config.py', profile='default')
 # c.TerminalIPythonApp.log_level = 30
 
 # lines of code to run at IPython startup.
-c.TerminalIPythonApp.exec_lines = [
+c.TerminalIPythonApp.exec_lines.extend([
 'from msmbuilder import Project',
 'from msmbuilder import Serializer',
 'from msmbuilder import Trajectory',
@@ -30,7 +30,7 @@ c.TerminalIPythonApp.exec_lines = [
 'import scipy.spatial',
 'import scipy.sparse',
 'import scipy.sparse.linalg',
-]
+])
 
 # Enable GUI event loop integration ('qt', 'wx', 'gtk').
 # c.TerminalIPythonApp.gui = None
