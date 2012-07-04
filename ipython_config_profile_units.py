@@ -1,6 +1,7 @@
 # Configuration file for ipython.
-import os
+
 c = get_config()
+load_subconfig('ipython_config.py', profile='default')
 
 #------------------------------------------------------------------------------
 # TerminalIPythonApp configuration
@@ -19,21 +20,30 @@ c = get_config()
 # c.TerminalIPythonApp.log_level = 30
 
 # lines of code to run at IPython startup.
-c.TerminalIPythonApp.exec_lines = [
-'import matplotlib.pyplot as pp',
-'pp.ion()',
-'import numpy as np',
-'import os',
-'import sys',
-]
+print_startup_code = """import numpy as np
+import quantities as pq
+from __future__ import division
 
-# from http://ipython.org/ipython-doc/dev/config/ipython.html#configuring-ipython
-c.InteractiveShell.autoindent = True
-c.InteractiveShell.colors = 'LightBG'
-c.InteractiveShell.confirm_exit = True
-c.InteractiveShell.deep_reload = True
-c.InteractiveShell.editor = 'mate' #textmate
-c.InteractiveShell.xmode = 'Context'
+k = 1.3806488e-23 * pq.J / pq.K    # Boltzmann's constant
+c = 299792458     * pq.m / pq.s    # Speed of light
+h = 6.626068e-34  * pq.J * pq.s    # Planck's constant
+Na = 6.022141e23  * pq.mol**(-1)   # Avagadro's number
+hbar = h / (2 * np.pi)             # Reduced Planck's constant
+
+# 1 / kT
+beta = lambda temp: (k * temp * pq.K)**(-1)
+
+# convert a string to an array
+s2a = lambda string: np.array(np.matrix(string)) if ';' in string else np.array(np.matrix(string)).reshape(-1)
+"""
+exec_lines = print_startup_code.split('\n')
+
+PURPLE = '\033[95m'
+ENDCOLOR = '\033[0m'
+exec_lines.append('print """\n{}{}{}"""'.format(PURPLE, print_startup_code, 
+    ENDCOLOR))
+
+c.TerminalIPythonApp.exec_lines.extend(exec_lines)
 
 # Enable GUI event loop integration ('qt', 'wx', 'gtk').
 # c.TerminalIPythonApp.gui = None
@@ -52,7 +62,7 @@ c.InteractiveShell.xmode = 'Context'
 # configuration (through profiles), history storage, etc. The default is usually
 # $HOME/.ipython. This options can also be specified through the environment
 # variable IPYTHON_DIR.
-# c.TerminalIPythonApp.ipython_dir = u''
+# c.TerminalIPythonApp.ipython_dir = u'/Users/rmcgibbo/.ipython'
 
 # Whether to display a banner upon starting IPython.
 # c.TerminalIPythonApp.display_banner = True
@@ -73,7 +83,7 @@ c.InteractiveShell.xmode = 'Context'
 # c.TerminalIPythonApp.extra_extension = ''
 
 # List of files to run at IPython startup.
-c.TerminalIPythonApp.exec_files = [os.path.expanduser('~/local/rmcgibbo-config/ipython_extras.ipy')]
+# c.TerminalIPythonApp.exec_files = []
 
 # Whether to overwrite existing config files when copying
 # c.TerminalIPythonApp.overwrite = False
@@ -117,7 +127,7 @@ c.TerminalIPythonApp.exec_files = [os.path.expanduser('~/local/rmcgibbo-config/i
 # configuration (through profiles), history storage, etc. The default is usually
 # $HOME/.ipython. This options can also be specified through the environment
 # variable IPYTHON_DIR.
-# c.TerminalIPythonApp.ipython_dir = u''
+# c.TerminalIPythonApp.ipython_dir = u'/Users/rmcgibbo/.ipython'
 
 # Whether to display a banner upon starting IPython.
 # c.TerminalIPythonApp.display_banner = True
@@ -126,7 +136,7 @@ c.TerminalIPythonApp.exec_files = [os.path.expanduser('~/local/rmcgibbo-config/i
 # c.TerminalIPythonApp.quick = False
 
 # A list of dotted module names of IPython extensions to load.
-c.TerminalIPythonApp.extensions = ['kernmagic']
+# c.TerminalIPythonApp.extensions = []
 
 # Whether to install the default config files into the profile dir. If a new
 # profile is being created, and IPython contains config files for that profile,
@@ -244,13 +254,13 @@ c.TerminalIPythonApp.extensions = ['kernmagic']
 # c.TerminalInteractiveShell.screen_length = 0
 
 # Set the editor used by IPython (default to $EDITOR/vi/notepad).
-# c.TerminalInteractiveShell.editor = 'emacs -nw'
+# c.TerminalInteractiveShell.editor = 'mate'
 
 # 
 # c.TerminalInteractiveShell.prompts_pad_left = True
 
 # The part of the banner to be printed before the profile
-# c.TerminalInteractiveShell.banner1 = 'Python 2.7.2 |EPD 7.1-1 (32-bit)| (default, Jul  3 2011, 15:40:35) \nType "copyright", "credits" or "license" for more information.\n\nIPython 0.11.dev -- An enhanced Interactive Python.\n?         -> Introduction and overview of IPython\'s features.\n%quickref -> Quick reference.\nhelp      -> Python\'s own help system.\nobject?   -> Details about \'object\', use \'object??\' for extra details.\n'
+# c.TerminalInteractiveShell.banner1 = 'Python 2.7.2 |EPD 7.1-2 (64-bit)| (default, Jul 27 2011, 14:50:45) \nType "copyright", "credits" or "license" for more information.\n\nIPython 0.11 -- An enhanced Interactive Python.\n?         -> Introduction and overview of IPython\'s features.\n%quickref -> Quick reference.\nhelp      -> Python\'s own help system.\nobject?   -> Details about \'object\', use \'object??\' for extra details.\n'
 
 # 
 # c.TerminalInteractiveShell.readline_parse_and_bind = ['tab: complete', '"\\C-l": clear-screen', 'set show-all-if-ambiguous on', '"\\C-o": tab-insert', '"\\C-r": reverse-search-history', '"\\C-s": forward-search-history', '"\\C-p": history-search-backward', '"\\C-n": history-search-forward', '"\\e[A": history-search-backward', '"\\e[B": history-search-forward', '"\\C-k": kill-line', '"\\C-u": unix-line-discard']

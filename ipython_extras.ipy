@@ -1,0 +1,2 @@
+# alias the magic function macopen to the system open command
+%alias macopen open

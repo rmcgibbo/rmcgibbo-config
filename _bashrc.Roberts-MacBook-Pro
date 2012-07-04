@@ -4,6 +4,13 @@ source $HOME/.bashrc.base
 # add local script bin to path
 export PATH=$HOME/local/bin:$PATH
 
+# color red
+export PS1="\n\[\e[1;31m\]\u@\h \[\e[0;33m\]\w\[\e[0m\]\n$ "
+
+alias ip='ipython'
+alias ipunits='ipython --profile=units'
+alias ipmsm='ipython --profile=msm'
+
 # set textmate as default editor
 export EDITOR=mate
 
