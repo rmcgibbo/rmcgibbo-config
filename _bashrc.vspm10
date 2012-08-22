@@ -1,6 +1,8 @@
 #!/bin/bash
 source $HOME/.bashrc.base
+
 export EDITOR=mate
+export TM_PYCHECKER=pylint
 
 alias ip='ipython'
 alias ipmsm='ipython --profile=msm'
