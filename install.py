@@ -40,6 +40,7 @@ def main():
 
     # link .emacs to _emacs
     link('_emacs', '~/.emacs')
+    link('_emacs.d', '~/.emacs.d')
 
     # link ipython_config.py
     if os.path.exists(os.path.expanduser('~/.ipython/profile_default')):
