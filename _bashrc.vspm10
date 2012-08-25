@@ -1,6 +1,8 @@
 #!/bin/bash
 source $HOME/.bashrc.base
+
 export EDITOR=mate
+export TM_PYCHECKER=pylint
 
 alias ip='ipython'
 alias ipmsm='ipython --profile=msm'
@@ -24,3 +26,10 @@ export TEXINPUTS=.:$HOME/.LaTeX:
 
 # install cctools
 export PATH=$HOME/local/cctools/bin:$PATH
+
+# install OpenMM
+export DYLD_LIBRARY_PATH=$HOME/local/OpenMM4.1-Mac/lib
+
+# install scala
+export SCALA_HOME=$HOME/local/scala-2.9.2
+export PATH=$PATH:$SCALA_HOME/bin

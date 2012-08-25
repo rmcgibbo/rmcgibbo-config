@@ -1,0 +1,22 @@
+#!/bin/bash
+source $HOME/.bashrc.base
+
+EDITOR=emacs
+export PS1="\n\[\e[1;31m\]\u@\h \[\e[0;33m\]\w\[\e[0m\]\n$ "
+
+# gromacs setup
+export GMXLIB=/usr/local/gromacs/share/gromacs/top/
+
+# EC2 Setup
+export EC2_PRIVATE_KEY=$HOME/aws/pk-OFD7YZMGBLAAXFGC45XNZZMNFHSG7I6W.pem
+export EC2_CERT=$HOME/aws/cert-OFD7YZMGBLAAXFGC45XNZZMNFHSG7I6W.pem
+
+# install EPD python
+export PATH="/home/rmcgibbo/local/epd-7.2-2-rh5-x86_64/bin:$PATH"
+
+# install CCtools (workqueue)
+export PATH="$HOME/local/cctools/bin:$PATH"
+export PYTHONPATH="$HOME/local/cctools/lib/python2.7/site-packages"
+
+# install local bin
+export PATH="$HOME/local/bin:$PATH"

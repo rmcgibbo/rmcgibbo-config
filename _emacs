@@ -1,3 +1,5 @@
+(add-to-list 'load-path "~/.emacs.d")
+
 (setq inhibit-startup-message t) ; no welcome screen
 (setq tab-width 4)          ; and 4 char wide for TAB
 (setq indent-tabs-mode nil) ; And force use of spaces
@@ -26,3 +28,7 @@
 (add-hook 'shell-mode-hook 
      '(lambda () (toggle-truncate-lines 1)))
 (setq comint-prompt-read-only t)
+
+;; add markdown mode
+(autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
+(setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))

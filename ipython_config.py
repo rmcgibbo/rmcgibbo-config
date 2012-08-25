@@ -126,7 +126,7 @@ c.TerminalIPythonApp.exec_files = [os.path.expanduser('~/local/rmcgibbo-config/i
 # c.TerminalIPythonApp.quick = False
 
 # A list of dotted module names of IPython extensions to load.
-c.TerminalIPythonApp.extensions = ['kernmagic']
+# c.TerminalIPythonApp.extensions = ['kernmagic']
 
 # Whether to install the default config files into the profile dir. If a new
 # profile is being created, and IPython contains config files for that profile,
