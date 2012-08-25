@@ -1,5 +1,22 @@
 #!/bin/bash
+
+# add 'usr/local/bin to front of path so that things installed
+# via brew go in front
+export PATH=/usr/local/bin:$PATH
+
 source $HOME/.bashrc.base
+
+#add OpenMM
+export DYLD_LIBRARY_PATH=/usr/local/openmm/lib:$DYLD_LIBRARY_PATH
+
+#add mysql
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+export PATH=/usr/local/mysql/bin:$PATH
+
+# add appengine
+export APP_ENGINE_SDK=$HOME/local/google_appengine
+export PYTHONPATH=$HOME/local/google_appengine
+export PATH=$HOME/local/google_appengine:$PATH
 
 # add local script bin to path
 export PATH=$HOME/local/bin:$PATH
@@ -13,6 +30,9 @@ alias ipmsm='ipython --profile=msm'
 
 # set textmate as default editor
 export EDITOR=mate
+
+# ignore space entries in history
+export HISTCONTROL=ignorespace
 
 # install msmbuilder extras                       
 export PYTHONPATH=$HOME/local/msmbuilder/msmbuilder:$PYTHONPATH
