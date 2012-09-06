@@ -21,6 +21,9 @@ export PATH=$HOME/local/google_appengine:$PATH
 # add local script bin to path
 export PATH=$HOME/local/bin:$PATH
 
+# add homebrew ruby scripts to bin
+export PATH=/usr/local/Cellar/ruby/1.9.3-p0/bin/:$PATH
+
 # color red
 export PS1="\n\[\e[1;31m\]\u@\h \[\e[0;33m\]\w\[\e[0m\]\n$ "
 
@@ -48,3 +51,6 @@ export PATH="$HOME/local/scala-2.9.1/bin:${PATH}"
 
 # Add custom path to LaTeX for finding my own .sty files
 export TEXINPUTS=.:$HOME/.LaTeX:
+
+# startup the fink package manager
+test -r /sw/bin/init.sh && . /sw/bin/init.sh
