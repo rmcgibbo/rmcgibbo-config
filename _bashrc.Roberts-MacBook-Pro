@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# add 'usr/local/bin to front of path so that things installed
-# via brew go in front
-export PATH=/usr/local/bin:$PATH
-
 source $HOME/.bashrc.base
 
 #add OpenMM
@@ -21,9 +17,6 @@ export PATH=$HOME/local/google_appengine:$PATH
 # add local script bin to path
 export PATH=$HOME/local/bin:$PATH
 
-# add homebrew ruby scripts to bin
-export PATH=/usr/local/Cellar/ruby/1.9.3-p0/bin/:$PATH
-
 # color red
 export PS1="\n\[\e[1;31m\]\u@\h \[\e[0;33m\]\w\[\e[0m\]\n$ "
 
@@ -37,20 +30,30 @@ export EDITOR=mate
 # ignore space entries in history
 export HISTCONTROL=ignorespace
 
-# install msmbuilder extras                       
-export PYTHONPATH=$HOME/local/msmbuilder/msmbuilder:$PYTHONPATH
-
-# Setting PATH for EPD-7.1-2
-export PATH="/Library/Frameworks/EPD64.framework/Versions/Current/bin:$PATH"
-
 # Install scala
 export SCALA_HOME="$HOME/local/scala-2.9.1"
 export SCALA_DOC="$HOME/local/scala-2.9.1/doc/scala-devel-docs"
 export SCALA_COMPILER="$HOME/local/scala-2.9.1/bin/scalac"
-export PATH="$HOME/local/scala-2.9.1/bin:${PATH}"
+exporalt PATH="$HOME/local/scala-2.9.1/bin:${PATH}"
 
 # Add custom path to LaTeX for finding my own .sty files
 export TEXINPUTS=.:$HOME/.LaTeX:
 
-# startup the fink package manager
+# add 'usr/local/bin to front of path so that things installed
+# via brew go in front
+export PATH=/usr/local/bin:$PATH
+# add homebrew ruby scripts to bin
+export PATH=/usr/local/Cellar/ruby/1.9.3-p0/bin/:$PATH
+
+
+# add packages installed via fink
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
+
+# Setting PATH for EPD-7.1-2
+export PATH="/Library/Frameworks/EPD64.framework/Versions/Current/bin:$PATH"
+
+#put my script dir in the very front
+export PATH=$HOME/local/bin:$PATH
+
+
+

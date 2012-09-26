@@ -32,8 +32,14 @@ def main():
     link('_bashrc.base', '~/.bashrc.base')
     
     # link the correct system-specfic bashrc to ~/.bashrc
-    hostname_root = os.uname()[1].split('.')[0]
-    link('_bashrc.' + hostname_root, '~/.bashrc')
+    try:
+        hostname_root = os.uname()[1].split('.')[0]
+        link('_bashrc.' + hostname_root, '~/.bashrc')
+    except Exception as e:
+        print '#'*80
+        print 'ERROR'
+        print e
+        print '#'*80
 
     # link _bash_profile to .bash_profile
     link('_bash_profile', '~/.bash_profile')
@@ -41,6 +47,9 @@ def main():
     # link .emacs to _emacs
     link('_emacs', '~/.emacs')
     link('_emacs.d', '~/.emacs.d')
+    
+    # link git config
+    link('_gitconfig', '~/.gitconfig')
 
     # link ipython_config.py
     if os.path.exists(os.path.expanduser('~/.ipython/profile_default')):
