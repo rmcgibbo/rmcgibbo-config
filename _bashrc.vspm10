@@ -7,6 +7,10 @@ export TM_PYCHECKER=pylint
 alias ip='ipython'
 alias ipmsm='ipython --profile=msm'
 alias ipunits='ipython --profile=units'
+
+export PATH=$HOME/.gem/ruby/1.8/bin:$PATH
+
+export PATH=$HOME/local/nbconvert:$PATH
 #alias octave="/Applications/Octave.app/Contents/Resources/bin/octave"
 
 # Setting PATH for EPD Python
