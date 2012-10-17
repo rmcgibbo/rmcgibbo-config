@@ -20,3 +20,9 @@ export PYTHONPATH="$HOME/local/cctools/lib/python2.7/site-packages"
 
 # install local bin
 export PATH="$HOME/local/bin:$PATH"
+
+# gromacs stuff
+export GMXBIN=/home/rmcgibbo/local/gromacs453/bin
+export GMXLIB=/home/rmcgibbo/local/gromacs453/share/gromacs/top
+export PATH=/home/rmcgibbo/local/cctools/bin:$PATH
+export PATH=$GMXBIN:$PATH
