@@ -12,7 +12,7 @@ export EC2_PRIVATE_KEY=$HOME/aws/pk-OFD7YZMGBLAAXFGC45XNZZMNFHSG7I6W.pem
 export EC2_CERT=$HOME/aws/cert-OFD7YZMGBLAAXFGC45XNZZMNFHSG7I6W.pem
 
 # install EPD python
-export PATH="/home/rmcgibbo/local/epd-7.2-2-rh5-x86_64/bin:$PATH"
+export PATH="/home/rmcgibbo/local/epd-7.3-1-rh5-x86_64/bin:$PATH"
 
 # install CCtools (workqueue)
 export PATH="$HOME/local/cctools/bin:$PATH"
