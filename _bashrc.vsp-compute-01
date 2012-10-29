@@ -14,6 +14,11 @@ export TERM=xterm-color
 # purple
 export PS1="\n\[\e[35m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ "
 
+# install R
+export PATH=$HOME/local/R/bin:$PATH
+# make the R shared libraries dynamically loadable (by rpy2)
+export LD_LIBRARY_PATH=$HOME/local/R/lib64/R/lib:$LD_LIBRARY_PATH
+alias r="R"
 
 # install EPD Python
 #export PATH=$HOME/local/epd-7.1-2-rh5-x86_64/bin:$PATH
