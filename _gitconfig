@@ -1,6 +1,6 @@
 [user]
-	name = Robert McGibbon
 	email = rmcgibbo@gmail.com
+	name = Robert McGibbon
 [alias]
 	switch = !legit switch \"$@\"
 	branches = !legit branches
@@ -15,23 +15,33 @@
   diff = auto
   status = auto
 
-[color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
-
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
+       plain = normal
+       meta = normal
+       frag = normal
+       old = red
+       new = green
+       commit = yellow
+       whitespace = normal red
+
+[color "branch"]
+       current = green
+       local = normal
+       remote = red
+       plain = normal
 
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+       header = normal
+       added = yellow
+       changed = green
+       untracked = red
+       nobranch = red
 
-[core]
-	editor = mate -w
-[merge]
-	tool = meld
+[color "grep"]
+       match = normal
+
+[color "interactive"]
+       prompt = normal
+       header = normal
+       help = normal
+       error = normal
