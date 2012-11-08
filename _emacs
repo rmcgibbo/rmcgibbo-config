@@ -32,3 +32,9 @@
 ;; add markdown mode
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
 (setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
+
+;; highlight ipython files like python
+(add-to-list 'auto-mode-alist '("\\.ipy\\'" . python-mode))
+
+;; highlight cuda files like c++
+(add-to-list 'auto-mode-alist '("\\.cu\\'" . c++-mode))

@@ -7,6 +7,7 @@ alias emacs='/usr/local/bin/emacs -nw'
 # ipython aliases
 alias ip='ipython'
 alias ipmsm='ipython --profile=msm'
+alias open='macopen'
 
 # set term type (emacs colors dont work rightt with default)
 export TERM=xterm-color
