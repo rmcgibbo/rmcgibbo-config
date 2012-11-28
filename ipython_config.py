@@ -19,6 +19,8 @@ c = get_config()
 # c.TerminalIPythonApp.log_level = 30
 
 # lines of code to run at IPython startup.
+# check the DISPLAY so that we can use pyplot without X11
+# sice the Agg backend can output to png without X
 c.TerminalIPythonApp.exec_lines = [
 'import os',
 'import sys',

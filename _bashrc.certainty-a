@@ -5,7 +5,6 @@ source $HOME/.bashrc.base
 # export LD_LIBRARY_PATH=/home/rmcgibbo/openmm/openmm-4.1.1/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home/rmcgibbo/openmm/openmm4.1.1/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$HOME/opt/lib:$LD_LIBRARY_PATH
-echo $LD_LIBRARY_PATH
 
 # purple
 export PS1="\n\[\e[35m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ "
