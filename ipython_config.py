@@ -20,11 +20,18 @@ c = get_config()
 
 # lines of code to run at IPython startup.
 c.TerminalIPythonApp.exec_lines = [
-'import matplotlib.pyplot as pp',
-'pp.ion()',
-'import numpy as np',
 'import os',
 'import sys',
+'import numpy as np',
+"""
+if 'DISPLAY' in os.environ:
+    pp.ion()
+else:
+    import matplotlib
+    matplotlib.use('Agg')
+
+import matplotlib.pyplot as pp    
+""",
 ]
 
 # from http://ipython.org/ipython-doc/dev/config/ipython.html#configuring-ipython
