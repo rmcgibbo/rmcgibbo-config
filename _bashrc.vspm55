@@ -1,5 +1,12 @@
 #!/bin/bash
 source $HOME/.bashrc.base
+alias emacs='/usr/bin/emacs -nw'
+
+# install cuda
+export PATH=/usr/local/cuda/bin/:$PATH
+
+# install openMM
+export LD_LIBRARY_PATH=/home/robert/openmm-4.1.1/lib:/usr/local/cuda/lib64/
 
 EDITOR=emacs
 export PS1="\n\[\e[1;31m\]\u@\h \[\e[0;33m\]\w\[\e[0m\]\n$ "
@@ -12,7 +19,7 @@ export EC2_PRIVATE_KEY=$HOME/aws/pk-OFD7YZMGBLAAXFGC45XNZZMNFHSG7I6W.pem
 export EC2_CERT=$HOME/aws/cert-OFD7YZMGBLAAXFGC45XNZZMNFHSG7I6W.pem
 
 # install EPD python
-export PATH="/home/rmcgibbo/local/epd-7.2-2-rh5-x86_64/bin:$PATH"
+export PATH="/home/robert/epd-7.3-2-rh5-x86_64/bin:$PATH"
 
 # install CCtools (workqueue)
 export PATH="$HOME/local/cctools/bin:$PATH"
