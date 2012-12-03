@@ -1,6 +1,13 @@
 #!/bin/bash
 source $HOME/.bashrc.base
 
+# purple prompt
+PROMPT="\n\[\e[35m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ "
+TITLEBAR='\[\e]0;\h\a\]'
+# Same thing.. but with octal ASCII escape chars
+#TITLEBAR='\[\033]2;\u@\h\007\]'
+PS1="${TITLEBAR}${PROMPT}"
+
 alias emacsw='/usr/local/bin/emacs'
 alias emacs='/usr/local/bin/emacs -nw'
 
@@ -12,8 +19,6 @@ alias open='macopen'
 # set term type (emacs colors dont work rightt with default)
 export TERM=xterm-color
 
-# purple
-export PS1="\n\[\e[35m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ "
 
 # install R
 export PATH=$HOME/local/R/bin:$PATH
