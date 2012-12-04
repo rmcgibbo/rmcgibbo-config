@@ -1,6 +1,9 @@
 #!/bin/bash
 source $HOME/.bashrc.base
 
+export PROMPT="\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n$ "
+export PS1="${TITLEBAR}${PROMPT}"
+
 export EDITOR=mate
 export TM_PYCHECKER=pylint
 
@@ -37,3 +40,6 @@ export DYLD_LIBRARY_PATH=$HOME/local/OpenMM4.1-Mac/lib
 # install scala
 export SCALA_HOME=$HOME/local/scala-2.9.2
 export PATH=$PATH:$SCALA_HOME/bin
+
+# alias pymol
+alias pymol='/Applications/MacPyMOL.app/Contents/MacOS/MacPyMol'
