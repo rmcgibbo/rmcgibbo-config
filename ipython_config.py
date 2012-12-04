@@ -19,12 +19,21 @@ c = get_config()
 # c.TerminalIPythonApp.log_level = 30
 
 # lines of code to run at IPython startup.
+# check the DISPLAY so that we can use pyplot without X11
+# sice the Agg backend can output to png without X
 c.TerminalIPythonApp.exec_lines = [
-'import matplotlib.pyplot as pp',
-'pp.ion()',
-'import numpy as np',
 'import os',
 'import sys',
+'import numpy as np',
+"""
+if 'DISPLAY' in os.environ:
+    pp.ion()
+else:
+    import matplotlib
+    matplotlib.use('Agg')
+
+import matplotlib.pyplot as pp    
+""",
 ]
 
 # from http://ipython.org/ipython-doc/dev/config/ipython.html#configuring-ipython

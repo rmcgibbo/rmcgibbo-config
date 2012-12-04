@@ -36,5 +36,8 @@
 ;; highlight ipython files like python
 (add-to-list 'auto-mode-alist '("\\.ipy\\'" . python-mode))
 
+;; highlight cython files like python
+(add-to-list 'auto-mode-alist '("\\.pyx\\'" . python-mode))
+
 ;; highlight cuda files like c++
 (add-to-list 'auto-mode-alist '("\\.cu\\'" . c++-mode))

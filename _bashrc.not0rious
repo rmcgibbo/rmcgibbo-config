@@ -1,0 +1,25 @@
+#!/bin/bash
+source $HOME/.bashrc.base
+
+EDITOR=emacs
+export PS1="\n\[\e[1;31m\]\u@\h \[\e[0;33m\]\w\[\e[0m\]\n$ "
+
+# gromacs setup
+#export GMXLIB=/usr/local/gromacs/share/gromacs/top/
+
+# install EPD python
+export PATH=$HOME/local/epd-7.3-1-rh5-x86_64/bin:$PATH
+
+# install CCtools (workqueue)
+#export PATH="$HOME/local/cctools/bin:$PATH"
+#export PYTHONPATH="$HOME/local/cctools/lib/python2.7/site-packages"
+
+# install local bin
+
+#export PATH="$HOME/local/bin:$PATH"
+
+# gromacs stuff
+#export GMXBIN=/home/rmcgibbo/local/gromacs453/bin
+#export GMXLIB=/home/rmcgibbo/local/gromacs453/share/gromacs/top
+#export PATH=/home/rmcgibbo/local/cctools/bin:$PATH
+#export PATH=$GMXBIN:$PATH
