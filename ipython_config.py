@@ -27,12 +27,12 @@ c.TerminalIPythonApp.exec_lines = [
 'import numpy as np',
 """
 if 'DISPLAY' in os.environ:
+    import matplotlib.pyplot as pp
     pp.ion()
 else:
     import matplotlib
     matplotlib.use('Agg')
-
-import matplotlib.pyplot as pp    
+    import matplotlib.pyplot as pp
 """,
 ]
 
