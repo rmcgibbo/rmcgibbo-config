@@ -2,10 +2,8 @@
 source $HOME/.bashrc.base
 
 EDITOR=emacs
-export PS1="\n\[\e[1;31m\]\u@\h \[\e[0;33m\]\w\[\e[0m\]\n$ "
-
-# gromacs setup
-#export GMXLIB=/usr/local/gromacs/share/gromacs/top/
+export PROMPT="\n\[\e[1;31m\]\u@\h \[\e[0;33m\]\w\[\e[0m\]\n$ "
+export PS1="${TITLEBAR}${PROMPT}"
 
 # install EPD python
 export PATH=$HOME/local/epd-7.3-1-rh5-x86_64/bin:$PATH
