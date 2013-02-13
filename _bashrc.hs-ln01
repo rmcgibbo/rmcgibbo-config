@@ -1,0 +1,20 @@
+#!/bin/bash
+source $HOME/.bashrc.base
+
+# install OpenMM
+# export LD_LIBRARY_PATH=/home/rmcgibbo/openmm/openmm-4.1.1/lib:$LD_LIBRARY_PATH
+# export LD_LIBRARY_PATH=/home/rmcgibbo/openmm/openmm4.1.1/lib:$HOME/opt/lib
+
+# purple
+export PROMPT="\n\[\e[1;31m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ "
+export PS1="${TITLEBAR}${PROMPT}"
+
+# install EPD Python
+# export PATH="$HOME/local/epd-7.3-1-rh5-x86_64/bin:$PATH" 
+
+# install CCTools
+# export PATH="$HOME/local/cctools/bin:$PATH" 
+
+# install gsl
+# export LD_LIBRARY_PATH="$HOME/local/gsl/lib:$LD_LIBRARY_PATH"
+# export PATH="$HOME/local/gsl/bin:$PATH"
