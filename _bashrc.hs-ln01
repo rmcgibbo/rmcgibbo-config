@@ -1,20 +1,35 @@
 #!/bin/bash
 source $HOME/.bashrc.base
 
+# install modules
+export MODULEPATH=$HOME/modulefiles:$MODULEPATH
+source /etc/profile.d/modules.sh
+
 # install OpenMM
 # export LD_LIBRARY_PATH=/home/rmcgibbo/openmm/openmm-4.1.1/lib:$LD_LIBRARY_PATH
 # export LD_LIBRARY_PATH=/home/rmcgibbo/openmm/openmm4.1.1/lib:$HOME/opt/lib
+
+# install additional modules
+export MODULEPATH=$HOME/modulefiles:$MODULEPATH
 
 # purple
 export PROMPT="\n\[\e[1;31m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ "
 export PS1="${TITLEBAR}${PROMPT}"
 
-# install EPD Python
-export PATH=$HOME/local/python/bin:$PATH
-# export PATH="$HOME/local/epd-7.3-1-rh5-x86_64/bin:$PATH" 
+module load intel/mkl
+module load R/2.15.1.mkl
+module load python/2.7.3
+module load swig/2.0.9
+module load cctools/3.7.0-RC1
+module load gromacs/4.5.5
 
-# install CCTools
-# export PATH="$HOME/local/cctools/bin:$PATH" 
+# install hdf5
+export LD_LIBRARY_PATH=$HOME/opt/hdf5/lib:$LD_LIBRARY_PATH
+export PATH=$HOME/opt/hdf5/bin:$PATH
 
-# install some local stuff
-export LD_LIBRARY_PATH=/home/rmcgibbo/local/lib:$LD_LIBRARY_PATH
+# install OpenMPI
+export LD_LIBRARY_PATH=$HOME/opt/openmpi163/lib:$LD_LIBRARY_PATH
+export PATH=$HOME/opt/openmpi163/bin:$PATH
+
+# install cmake 2.8
+export PATH=$HOME/opt/cmake/bin:$PATH
