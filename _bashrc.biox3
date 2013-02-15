@@ -1,6 +1,10 @@
 #!/bin/bash
 source $HOME/.bashrc.base
 
+# install modules
+export MODULEPATH=$HOME/modulefiles:$MODULEPATH
+source /etc/profile.d/modules.sh
+
 # install OpenMM
 # export LD_LIBRARY_PATH=/home/rmcgibbo/openmm/openmm-4.1.1/lib:$LD_LIBRARY_PATH
 # export LD_LIBRARY_PATH=/home/rmcgibbo/openmm/openmm4.1.1/lib:$HOME/opt/lib
@@ -9,11 +13,15 @@ source $HOME/.bashrc.base
 export PROMPT="\n\[\e[35m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ "
 export PS1="${TITLEBAR}${PROMPT}"
 
-# install EPD Python
-export PATH=$HOME/local/python/bin:$PATH
+module load intel/mkl
+module load R/2.15.2
+module load python/2.7.3
+module load cctools/3.7.0-RC1
+module load gromacs/4.5.5
 
 # install CCTools
 # export PATH="$HOME/local/cctools/bin:$PATH" 
 
-# install some local stuff
-export LD_LIBRARY_PATH=/home/rmcgibbo/local/lib:$LD_LIBRARY_PATH
+# install hdf5 libraries and executables
+export LD_LIBRARY_PATH=$HOME/opt/hdf5/lib:$LD_LIBRARY_PATH
+export PATH=$HOME/opt/hdf5/bin:$PATH
