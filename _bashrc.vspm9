@@ -1,0 +1,29 @@
+#!/bin/bash
+source $HOME/.bashrc.base
+
+export PROMPT="\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n$ "
+export PS1="${TITLEBAR}${PROMPT}"
+export EDITOR=emacs
+
+# install hub additions to git
+eval "$(hub alias -s)"
+
+# Install EPD python
+export PATH=$HOME/opt/python/2.7.4/bin:$PATH
+
+# Install CUDA
+export CUDA_HOME=/usr/local/cuda
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/lib/nvidia-current:$LD_LIBRARY_PATH
+
+# Install OpenMM
+export OPENMM_LIB_PATH=$HOME/opt/openmm/lib
+export OPENMM_INCLUDE_PATH=$HOME/opt/openmm/include
+export LD_LIBRARY_PATH=$HOME/opt/openmm/lib:$LD_LIBRARY_PATH
+export OPENMM_PLUGIN_DIR=$HOME/opt/openmm/lib/plugins
+
+# install R
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
