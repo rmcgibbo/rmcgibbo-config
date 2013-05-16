@@ -36,10 +36,8 @@ def main():
         hostname_root = os.uname()[1].split('.')[0]
         link('_bashrc.' + hostname_root, '~/.bashrc')
     except Exception as e:
-        print '#'*80
-        print 'ERROR'
-        print e
-        print '#'*80
+        print 'Using default bashrc'
+        link('_bashrc.default', '~/.bashrc')
 
     # link _bash_profile to .bash_profile
     link('_bash_profile', '~/.bash_profile')
