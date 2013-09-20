@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
-import os, shutil
+import os
+import sys
+import shutil
 from time import strftime
 
 def link(src, dest):
@@ -8,7 +10,10 @@ def link(src, dest):
     dest = os.path.expanduser(dest)
     if not os.path.exists(src):
         raise Exception('%s doesnt exist' % src)
-    
+
+    if not os.path.exists(os.path.dirname(dest)):
+        os.makedirs(os.path.dirname(dest))
+
     if os.path.exists(dest):
         if os.path.islink(dest):
             if os.path.abspath(os.readlink(dest)) == src:
@@ -74,6 +79,15 @@ def main():
         link('ipython_config_profile_units.py', '~/.config/ipython/profile_units/ipython_config.py')
     else:
         print 'Could not find an ipython config directory for profile=units'
+
+    # link matplotlibrc
+    if sys.platform.startswith('linux'):
+        if 'XDG_CONFIG_HOME' in os.environ:
+            link('matplotlibrc', '%s/matplotlib/matplotlibrc' % os.environ['XDG_CONFIG_HOME'])
+        else:
+            link('matplotlibrc', '~/.config/matplotlib/matplotlibrc')
+    else:
+        link('matplotlibrc', '~/.matplotlib/matplotlibrc')
 
     if 'TEXINPUTS' in os.environ:
         link('rmcgibbo-latex.sty', '~/.LaTeX/rmcgibbo-latex.sty')
