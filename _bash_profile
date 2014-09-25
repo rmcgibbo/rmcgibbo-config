@@ -1,1 +1,21 @@
 source .bashrc
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Added by Canopy installer on 2013-04-11
+# source /Users/rmcgibbo/Library/Enthought/Canopy_64bit/User/bin/activate
+
+# added by Anaconda 1.7.0 installer
+# export ANACONDA_WORKON_HOME=$HOME/anaconda/envs
+# export PATH="/Users/rmcgibbo/anaconda/bin:$PATH"
+
+# added by Miniconda 3.0.0 installer
+# export PATH="/Users/rmcgibbo/miniconda/bin:$PATH"
+# export PATH="/usr/local/Cellar/swig/2.0.4/bin/:$PATH"
+
+# Setting PATH for Python 3.4
+# The orginal version is saved in .bash_profile.pysave
+# PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+# export PATH
+
+# added by Miniconda 3.6.0 installer
+# export PATH="/Users/rmcgibbo/miniconda2/bin:$PATH"

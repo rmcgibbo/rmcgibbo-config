@@ -21,20 +21,20 @@ c = get_config()
 # lines of code to run at IPython startup.
 # check the DISPLAY so that we can use pyplot without X11
 # sice the Agg backend can output to png without X
-c.TerminalIPythonApp.exec_lines = [
-'import os',
-'import sys',
-'import numpy as np',
-"""
-if 'DISPLAY' in os.environ:
-    import matplotlib.pyplot as pp
-    pp.ion()
-else:
-    import matplotlib
-    matplotlib.use('Agg')
-    import matplotlib.pyplot as pp
-""",
-]
+# c.TerminalIPythonApp.exec_lines = [
+# 'import os',
+# 'import sys',
+# 'import numpy as np',
+# """
+# if 'DISPLAY' in os.environ:
+#     import matplotlib.pyplot as pp
+#     pp.ion()
+# else:
+#     import matplotlib
+#     matplotlib.use('Agg')
+#     import matplotlib.pyplot as pp
+# """,
+# ]
 
 # from http://ipython.org/ipython-doc/dev/config/ipython.html#configuring-ipython
 c.InteractiveShell.autoindent = True
@@ -50,7 +50,7 @@ c.InteractiveShell.xmode = 'Context'
 # Pre-load matplotlib and numpy for interactive use, selecting a particular
 # matplotlib backend and loop integration.
 # c.TerminalIPythonApp.pylab = 'inline'
-c.IPKernelApp.pylab = 'inline' 
+# c.IPKernelApp.pylab = 'inline' 
 
 # Suppress warning messages about legacy config files
 # c.TerminalIPythonApp.ignore_old_config = False
