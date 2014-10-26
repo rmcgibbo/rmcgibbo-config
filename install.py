@@ -50,6 +50,9 @@ def main():
     # link .emacs to _emacs
     link('_emacs', '~/.emacs')
     link('_emacs.d', '~/.emacs.d')
+
+    # http://www.colordiff.org/
+    link('_colordiffrc', '~/.colordiffrc')
     
     # link git config
     link('_gitconfig', '~/.gitconfig')
