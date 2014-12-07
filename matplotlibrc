@@ -1,7 +1,7 @@
 axes.axisbelow : True
 axes.color_cycle: 348ABD, 7A68A6, A60628, 467821, CF4457, 188487, E24A33
-axes.edgecolor: bcbcbc
-axes.facecolor: eeeeee
+# axes.edgecolor: bcbcbc
+# axes.facecolor: eeeeee
 axes.grid: True
 axes.labelcolor: k
 axes.labelsize: large
@@ -28,8 +28,8 @@ legend.fancybox: True
 lines.antialiased: True
 lines.linewidth: 1.0
 patch.antialiased: True
-patch.edgecolor: EEEEEE
-patch.facecolor: 348ABD
+# patch.edgecolor: EEEEEE
+# patch.facecolor: 348ABD
 patch.linewidth: 0.5
 toolbar: toolbar2
 xtick.color: k

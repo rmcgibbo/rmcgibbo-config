@@ -1,3 +1,4 @@
+
 (add-to-list 'load-path "~/.emacs.d")
 
 (setq inhibit-startup-message t) ; no welcome screen
@@ -67,7 +68,6 @@
   (set-frame-width (selected-frame) 120)
 )
 
-
 (defun toggle-window-split ()
   (interactive)
   (if (= (count-windows) 2)
@@ -92,3 +92,8 @@
 		  (set-window-buffer (next-window) next-win-buffer)
 		    (select-window first-win)
 		      (if this-win-2nd (other-window 1))))))
+
+(add-to-list 'auto-mode-alist
+               '("\\.\\(?:gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|ru\\|thor\\)\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist
+               '("\\(Capfile\\|Gemfile\\(?:\\.[a-zA-Z0-9._-]+\\)?\\|[rR]akefile\\)\\'" . ruby-mode))

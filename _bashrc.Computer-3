@@ -66,10 +66,6 @@ export PATH=$PATH:/Applications/Doxygen.app/Contents/Resources/
 # install pymol
 alias pymol="/Applications/MacPyMOL.app/Contents/MacOS/MacPyMOL"
 
-export VAGRANT_CWD=$HOME/projects/vagrant
-# ruby
-export PATH=$HOME/.rbenv/shims:$PATH
-
 # swift parallel
 export PATH=$HOME/local/swift-0.94/bin:$PATH
 export SWIFT_HOME=$HOME/local/swift-0.94
@@ -80,3 +76,10 @@ export PATH=$HOME/opt/ImageMagick-6.8.9/bin:$PATH
 
 # Use colordiff to provide diffs
 alias diff=colordiff
+export PATH=$HOME/usr/bin:$PATH
+
+export MOE_API_URL=http://latest-1.65795cc2-rmcgibbo.node.tutum.io:49157
+
+# boot2docker
+$(boot2docker shellinit 2>/dev/null)
+alias docker-dev="docker run -i -t rmcgibbo/dev /bin/zsh"
