@@ -1,5 +1,4 @@
-
-(add-to-list 'load-path "~/.emacs.d")
+;;(add-to-list 'load-path "~/.emacs.d")
 
 (setq inhibit-startup-message t) ; no welcome screen
 (setq tab-width 4)          ; and 4 char wide for TAB
